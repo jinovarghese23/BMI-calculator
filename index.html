@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="shortcut icon"
+        href="https://cdn2.iconfinder.com/data/icons/men-women-health-wildberry-vol-1/256/BMI_Calculator-512.png"
+        type="image/x-icon">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Header -->
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h2 class="d-flex align-items-center justify-content-center mt-4 text-warning">BMI CALCULATOR</h2>
+                <div id="form" class="col-4 mt-5 border border-2 rounded">
+                    <h1 class="text-center">BMI calculator</h1>
+                    <form class="form " action="">
+                        <div class="input-group input-group-md mt-5 ">
+                            <label for="weight">Weight (KG)</label>
+                            <input type="number" class="form-control ms-2" id="weight" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div class="input-group input-group-md mt-5 ">
+                            <label for="height">Height (CM)</label>
+                            <input type="number" class="form-control ms-2" id="height" aria-label="Sizing example input"
+                                aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-evenly">
+                        <button class="btn btn-success" type="button" onclick="clearFields()">RESET</button>
+                        <button class="btn btn-warning" type="button" onclick="calculateBodyMassIndex()">CALCULATE</button>
+                    </div>
+                    <section class="output mt-2 ms-3">
+                        <h3 class="d-flex justify-content-center">Your BMI is</h3>
+                        <h1 id="result" class="d-flex justify-content-center">0</h1>
+                    </section>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</body>
+<script src="./logic.js"></script>
+</html>
